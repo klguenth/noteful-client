@@ -16,12 +16,12 @@ export default class AddNote extends React.Component {
                 <div className="noteTitle">
                     <div className="noteHint">* = Required Field</div>
                     <label htmlFor="name">Name*</label>
-                    <input type="text" className="noteName" name="name" id="noteName" onSubmit={e => this.handleSubmit(e)}/>
+                    <input type="text" className="noteName" name="name" id="noteName" />
                     <input type="text" className="noteContent" name="content" id="noteContent"/>
                     <input type="text" className="noteFolder" name="folder" id="noteFolder"/>
                 </div>
                 <div className="noteButton">
-                    <button type="submit" className="noteSubmit">
+                    <button type="submit" className="noteSubmit" onSubmit={e => this.handleSubmit(e)}>
                         Save
                     </button>
                 </div>
