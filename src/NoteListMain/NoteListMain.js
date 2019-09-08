@@ -23,7 +23,7 @@ function deleteNote() {
     return res.json()
   })
   .then(data => {
-    callback()
+    callbackify()
   })
   .catch(error => {
     console.error(error)

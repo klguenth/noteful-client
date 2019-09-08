@@ -38,7 +38,7 @@ export default class AddFolder {
                     <input type="text" className="folderName" name="name" id="name"/>
                 </div>
                 <div className="formSubmit">
-                    <button type="submit" className="buttonSubmit">
+                    <button type="submit" className="buttonSubmit" onSubmit={this.handleSubmit(e)}>
                         Create Folder
                     </button>
                 </div>
