@@ -4,7 +4,9 @@ export default class AddNote extends React.Component {
     
     handleSubmit(event) {
         event.preventDefault();
-        const noteName = this.name
+        const noteName = event.target.name.value;
+        const noteContent = event.target.noteContent.value;
+        const noteFolder = event.target.noteFolder.value;
     }
 
     render() {
@@ -14,8 +16,9 @@ export default class AddNote extends React.Component {
                 <div className="noteTitle">
                     <div className="noteHint">* = Required Field</div>
                     <label htmlFor="name">Name*</label>
-                    <input type="text" className="noteName" name="name" id="noteName"/>
+                    <input type="text" className="noteName" name="name" id="noteName" onSubmit={e => this.handleSubmit(e)}/>
                     <input type="text" className="noteContent" name="content" id="noteContent"/>
+                    <input type="text" className="noteFolder" name="folder" id="noteFolder"/>
                 </div>
                 <div className="noteButton">
                     <button type="submit" className="noteSubmit">

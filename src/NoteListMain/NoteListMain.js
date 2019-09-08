@@ -11,7 +11,7 @@ function deleteNote() {
   fetch ({
     method: 'DELETE',
     headers: {
-
+      
     }
   })
   .then (res => {
